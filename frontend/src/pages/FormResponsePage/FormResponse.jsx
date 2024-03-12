@@ -31,8 +31,10 @@ const FormResponse = () => {
 	}, [action]);
 	
 	useEffect(() => {
+		console.log(form[0].formJson.date);
 		const today = moment().format("jYYYY/jMM/jDD");
 		const isGreater = moment(form[0].formJson.date, "jYYYY/jMM/jDD").isAfter(moment(today, "jYYYY/jMM/jDD"));
+		console.log(form[0].formJson.date);
 		setIsTodayGreater(isGreater);
 		console.log("forms", form[0].formJson.date);
 	});

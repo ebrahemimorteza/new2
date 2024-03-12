@@ -17,7 +17,9 @@ const getResult = async(req, res) => {
 };
 //create respone form
 const getFormById = async(req, res) => {
+	console.log("getFormById>>>>");
     const result = await formService.getFormById(req.query.id);
+	console.log(result);
     res.send(result);
 };
 

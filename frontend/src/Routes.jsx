@@ -6,12 +6,17 @@ import FormListing from "./pages/FormListingPage/FormListing";
 import FormListingUser from "./pages/FormListingPage/FormListingUser";
 import FormResponse from "./pages/FormResponsePage/FormResponse";
 import FormUser from "./pages/FormResponsePage/user";
+import FormLogin from "./pages/FormResponsePage/login";
 import IndexAdmin from "./layout/admin";
 
 const routes = [
 	{
-		url: "/",
+		url: "/st",
 		component: FormUser,
+	},
+	{
+		url: "/",
+		component: FormLogin,
 	},
 	{
 		url: "/listin-user",

@@ -96,8 +96,10 @@ export function* handleGetUsers() {
 
 
 export function* handleGetFormById(action) {
+	console.log("handleGetFormById");
 	try {
 		const response = yield call(requestGetFormById, action.payload);
+		console.log(response)
 		yield put(formActions.getFormSuccess(response.data));
 	} catch (error) {
 		console.error(error);
